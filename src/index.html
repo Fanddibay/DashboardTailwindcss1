@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <!-- css style -->
+    <link rel="stylesheet" href="output.css" />
+    <script src="https://cdn.jsdelivr.net/timepicker.js/latest/timepicker.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/timepicker.js/latest/timepicker.min.css"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/96d468eb3f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="font-sans">
+    <div class="grid grid-cols-12 min-h-screen">
+      <!-- sidebar -->
+
+      <nav
+        id="default-sidebar"
+        class="z-40 h-full transition-transform -translate-x-full sm:translate-x-0 col-span-2"
+        aria-label="Sidebar"
+      >
+        <div
+          class="h-full px-3 py-4 overflow-y-auto bg-[#f2f2f2] dark:bg-gray-800 pt-[60px] pl-[32px]"
+        >
+          <img
+            src="/src/img/assets/Logo.png"
+            class="w-[150px] mb-[60px]"
+            alt=""
+          />
+          <ul class="space-y-2 font-medium text-lg">
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 text-[#808080] rounded-lg dark:text-white hover:bg-[#B4CD93] dark:hover:bg-gray-700 mb-[24px]"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-[#808080] dark:group-hover:text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
+                  <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
+                </svg>
+                <span class="ml-3">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 text-[#808080] rounded-lg dark:text-white hover:bg-[#B4CD93] dark:hover:bg-gray-700 mb-[24px]"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-[#808080] dark:group-hover:text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                  ></path>
+                </svg>
+                <span class="flex-1 ml-3 whitespace-nowrap">Kanban</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 text-[#808080] rounded-lg dark:text-white hover:bg-[#B4CD93] dark:hover:bg-gray-700 mb-[24px]"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-[#808080] dark:group-hover:text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z"
+                  ></path>
+                  <path
+                    d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"
+                  ></path>
+                </svg>
+                <span class="flex-1 ml-3 whitespace-nowrap">Inbox</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 text-[#808080] rounded-lg dark:text-white hover:bg-[#B4CD93] dark:hover:bg-gray-700 mb-[24px]"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-[#808080] dark:group-hover:text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="flex-1 ml-3 whitespace-nowrap">Users</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 text-[#808080] rounded-lg dark:text-white hover:bg-[#B4CD93] dark:hover:bg-gray-700 mb-[24px]"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-[#808080] dark:group-hover:text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="flex-1 ml-3 whitespace-nowrap">Products</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 text-[#808080] rounded-lg dark:text-white hover:bg-[#B4CD93] dark:hover:bg-gray-700 mb-[24px]"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-[#808080] dark:group-hover:text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="flex-1 ml-3 whitespace-nowrap">Sign In</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 text-[#808080] rounded-lg dark:text-white hover:bg-[#B4CD93] dark:hover:bg-gray-700 mb-[24px]"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-[#808080] dark:group-hover:text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5 4a3 3 0 00-3 3v6a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H5zm-1 9v-1h5v2H5a1 1 0 01-1-1zm7 1h4a1 1 0 001-1v-1h-5v2zm0-4h5V8h-5v2zM9 8H4v2h5V8z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="flex-1 ml-3 whitespace-nowrap">Sign Up</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- end sidebar -->
+
+      <!-- center content -->
+      <div class="pt-[60px] mr-16 col-span-6 mx-16">
+        <!-- search bar -->
+        <div class="mb-[60px]">
+          <form>
+            <label
+              for="default-search"
+              class="mb-2 text-sm font-medium text-lg text-gray-900 sr-only dark:text-white"
+              >Search</label
+            >
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
+                </svg>
+              </div>
+              <input
+                type="search"
+                id="default-search"
+                class="block w-full md:w-full md:h-[48px] p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Search artists, projects."
+                required
+              />
+            </div>
+          </form>
+        </div>
+        <!-- end search bar -->
+        <h1 class="font-semibold text-lg mb-[32px]">In the last 30 days</h1>
+        <!-- top content -->
+        <div
+          class="md:flex w-full justify-center col md:justify-between gap-x-4"
+        >
+          <div class="">
+            <div class="absolute text-white ml-3 mt-4">
+              <h3 class="font-semibold text-lg">30,000</h3>
+              <p class="text-sm">Art Sales</p>
+            </div>
+            <div class="absolute text-white ml-3 mt-4">
+              <h3 class="font-semibold text-lg">30,000</h3>
+              <p class="text-sm">Art Sales</p>
+            </div>
+            <img
+              src="/src/img/assets/Content Top.png"
+              width="227px"
+              height="80px"
+              alt=""
+            />
+          </div>
+          <div class="">
+            <div class="absolute text-white ml-3 mt-4">
+              <h3 class="font-semibold text-lg">250</h3>
+              <p class="text-sm">New artists</p>
+            </div>
+            <img
+              src="/src/img/assets/Content Top.png"
+              width="227px"
+              height="80px"
+              alt=""
+            />
+          </div>
+          <div class="">
+            <div class="absolute text-white ml-3 mt-4">
+              <h3 class="font-semibold text-lg">$400,000</h3>
+              <p class="text-sm">Revenue generated</p>
+            </div>
+            <img
+              src="/src/img/assets/Content Top.png"
+              width="227px"
+              height="80px"
+              alt=""
+            />
+          </div>
+        </div>
+        <!-- end top content -->
+        <div class="flex justify-between md:mt-[64px] md:mb-[32px]">
+          <!-- right content -->
+          <div class="text-[#4C4C4C] text-lg">
+            <h3>All Artist</h3>
+            <p class="text-[#B3B3B3] text-sm">
+              Monitor artist sales, reviews, etc.
+            </p>
+          </div>
+          <!-- end right content -->
+          <div class="flex justify-end">
+            <form>
+              <label
+                for="default-search"
+                class="mb-2 text-sm font-medium text-lg text-gray-900 sr-only dark:text-white"
+                >Search</label
+              >
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  type="search"
+                  id="default-search"
+                  class="block w-full md:w-[240px] md:h-[32px] p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Search artists."
+                  required
+                />
+              </div>
+            </form>
+            <button
+              class="border-[#E6E6E6] border-2 w-[58px] h-[32px] border-gray-300 rounded-sm flex container content-center items-center justify-center ml-2 text-[12px]"
+            >
+              <span> <img src="/src/img/icon/filter-search.svg" alt="" /></span>
+              Filter
+            </button>
+          </div>
+        </div>
+        <div class="container">
+          <div class="relative overflow-x-auto">
+            <table
+              class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
+            >
+              <thead
+                class="text-xs text-gray-300 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+              >
+                <tr>
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-[12px] text-[#4C4C4C] font-semibold"
+                  >
+                    Artist
+                  </th>
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-[12px] text-[#4C4C4C] font-semibold"
+                  >
+                    Status
+                  </th>
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-[12px] text-[#4C4C4C] font-semibold"
+                  >
+                    Ratings
+                  </th>
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-[12px] text-[#4C4C4C] font-semibold"
+                  >
+                    Projects sold
+                  </th>
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-[12px] text-[#4C4C4C] font-semibold"
+                  >
+                    Highest sale
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- table data 1  -->
+                <tr
+                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                >
+                  <th
+                    scope="row"
+                    class="px-6 py-4 font-medium text-lg text-gray-900 whitespace-nowrap dark:text-white"
+                  >
+                    <span class="flex gap-4 items-center"
+                      ><img
+                        src="/src/img/assets/Avatar - 05.png"
+                        width="24px"
+                        alt=""
+                      />
+                      <p class="ml-4 text-[14px]">Bluenose</p></span
+                    >
+                  </th>
+                  <td class="px-6 py-4">
+                    <div
+                      class="bg-[#DEEDE5] text-[#427A5B] text-center rounded-sm p-1"
+                    >
+                      Verifed
+                    </div>
+                  </td>
+                  <td
+                    class="px-6 py-4 justify-center items-center self-center align-middle gap-2"
+                  >
+                    <div class="items-center gap-4 flex">
+                      <img
+                        src="img/assets/progressBar-1.png"
+                        width="100px"
+                        class="h-2 my"
+                        alt=""
+                      />
+                      <p class="flex justify-center items-center gap-2">
+                        40%
+                        <span
+                          class="bg-[#DEEDE5] text-[#427A5B] text-center items-center gap-2 rounded-sm flex p-1"
+                          ><i class="fas fa-arrow-up"></i>4%</span
+                        >
+                      </p>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 text-center">400</td>
+                  <td class="px-6 py-4">$400,000</td>
+                </tr>
+                <!-- table data 2  -->
+                <tr
+                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                >
+                  <th
+                    scope="row"
+                    class="px-6 py-4 font-medium text-lg text-gray-900 whitespace-nowrap dark:text-white"
+                  >
+                    <span class="flex gap-4 items-center"
+                      ><img
+                        src="/src/img/assets/Avatar - 03.png"
+                        width="24px"
+                        alt=""
+                      />
+                      <p class="ml-4 text-[14px]">pennywise</p></span
+                    >
+                  </th>
+                  <td class="px-6 py-4">
+                    <div
+                      class="bg-[#FDF8CE] text-[#938406] text-center rounded-sm p-1"
+                    >
+                      Pending
+                    </div>
+                  </td>
+                  <td
+                    class="px-6 py-4 justify-center items-center self-center align-middle gap-2"
+                  >
+                    <div class="items-center gap-4 flex">
+                      <img
+                        src="img/assets/progressBar-2.png"
+                        width="100px"
+                        class="h-2 my"
+                        alt=""
+                      />
+                      <p class="flex justify-center items-center gap-2">
+                        40%
+                        <span
+                          class="bg-[#DEEDE5] text-[#427A5B] text-center items-center gap-2 rounded-sm flex p-1"
+                          ><i class="fas fa-arrow-up"></i>4%</span
+                        >
+                      </p>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 text-center">400</td>
+                  <td class="px-6 py-4">$400,000</td>
+                </tr>
+                <!-- table data 3  -->
+                <tr
+                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                >
+                  <th
+                    scope="row"
+                    class="px-6 py-4 font-medium text-lg text-gray-900 whitespace-nowrap dark:text-white"
+                  >
+                    <span class="flex gap-4 items-center"
+                      ><img
+                        src="/src/img/assets/Avatar - 04.png"
+                        width="24px"
+                        alt=""
+                      />
+                      <p class="ml-4 text-[14px]">Flotsam</p></span
+                    >
+                  </th>
+                  <td class="px-6 py-4">
+                    <div
+                      class="bg-[#DEEDE5] text-[#427A5B] text-center rounded-sm p-1"
+                    >
+                      Verifed
+                    </div>
+                  </td>
+                  <td
+                    class="px-6 py-4 justify-center items-center self-center align-middle gap-2"
+                  >
+                    <div class="items-center gap-4 flex">
+                      <img
+                        src="img/assets/progressBar-2.png"
+                        width="100px"
+                        class="h-2 my"
+                        alt=""
+                      />
+                      <p class="flex justify-center items-center gap-2">
+                        89%
+                        <span
+                          class="bg-[#DEEDE5] text-[#427A5B] text-center items-center gap-2 rounded-sm flex p-1"
+                          ><i class="fas fa-arrow-up"></i>20%</span
+                        >
+                      </p>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 text-center">30</td>
+                  <td class="px-6 py-4">$900,000</td>
+                </tr>
+                <!-- table data 4  -->
+                <tr
+                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                >
+                  <th
+                    scope="row"
+                    class="px-6 py-4 font-medium text-lg text-gray-900 whitespace-nowrap dark:text-white"
+                  >
+                    <span class="flex gap-4 items-center"
+                      ><img
+                        src="/src/img/assets/Avatar - 02.png"
+                        width="24px"
+                        alt=""
+                      />
+                      <p class="ml-4 text-[14px]">Siuuuu</p></span
+                    >
+                  </th>
+                  <td class="px-6 py-4">
+                    <div
+                      class="bg-[#FDF8CE] text-[#938406] text-center rounded-sm p-1"
+                    >
+                      Pending
+                    </div>
+                  </td>
+                  <td
+                    class="px-6 py-4 justify-center items-center self-center align-middle gap-2"
+                  >
+                    <div class="items-center gap-4 flex">
+                      <img
+                        src="img/assets/progressBar-1.png"
+                        width="100px"
+                        class="h-2 my"
+                        alt=""
+                      />
+                      <p class="flex justify-center items-center gap-2">
+                        64%
+                        <span
+                          class="bg-[#DEEDE5] text-[#427A5B] text-center items-center gap-2 rounded-sm flex p-1"
+                          ><i class="fas fa-arrow-up"></i>2%</span
+                        >
+                      </p>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 text-center">40</td>
+                  <td class="px-6 py-4">$400,000</td>
+                </tr>
+                <tr
+                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                >
+                  <th
+                    scope="row"
+                    class="px-6 py-4 font-medium text-lg text-gray-900 whitespace-nowrap dark:text-white"
+                  >
+                    <span class="flex gap-4 items-center"
+                      ><img
+                        src="/src/img/assets/Avatar - 02.png"
+                        width="24px"
+                        alt=""
+                      />
+                      <p class="ml-4 text-[14px]">Siuuuu</p></span
+                    >
+                  </th>
+                  <td class="px-6 py-4">
+                    <div
+                      class="bg-[#FDF8CE] text-[#938406] text-center rounded-sm p-1"
+                    >
+                      Pending
+                    </div>
+                  </td>
+                  <td
+                    class="px-6 py-4 justify-center items-center self-center align-middle gap-2"
+                  >
+                    <div class="items-center gap-4 flex">
+                      <img
+                        src="img/assets/progressBar-1.png"
+                        width="100px"
+                        class="h-2 my"
+                        alt=""
+                      />
+                      <p class="flex justify-center items-center gap-2">
+                        64%
+                        <span
+                          class="bg-[#DEEDE5] text-[#427A5B] text-center items-center gap-2 rounded-sm flex p-1"
+                          ><i class="fas fa-arrow-up"></i>2%</span
+                        >
+                      </p>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 text-center">40</td>
+                  <td class="px-6 py-4">$400,000</td>
+                </tr>
+                <tr
+                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                >
+                  <th
+                    scope="row"
+                    class="px-6 py-4 font-medium text-lg text-gray-900 whitespace-nowrap dark:text-white"
+                  >
+                    <span class="flex gap-4 items-center"
+                      ><img
+                        src="/src/img/assets/Avatar - 02.png"
+                        width="24px"
+                        alt=""
+                      />
+                      <p class="ml-4 text-[14px]">Siuuuu</p></span
+                    >
+                  </th>
+                  <td class="px-6 py-4">
+                    <div
+                      class="bg-[#FDF8CE] text-[#938406] text-center rounded-sm p-1"
+                    >
+                      Pending
+                    </div>
+                  </td>
+                  <td
+                    class="px-6 py-4 justify-center items-center self-center align-middle gap-2"
+                  >
+                    <div class="items-center gap-4 flex">
+                      <img
+                        src="img/assets/progressBar-1.png"
+                        width="100px"
+                        class="h-2 my"
+                        alt=""
+                      />
+                      <p class="flex justify-center items-center gap-2">
+                        64%
+                        <span
+                          class="bg-[#DEEDE5] text-[#427A5B] text-center items-center gap-2 rounded-sm flex p-1"
+                          ><i class="fas fa-arrow-up"></i>2%</span
+                        >
+                      </p>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 text-center">40</td>
+                  <td class="px-6 py-4">$400,000</td>
+                </tr>
+              </tbody>
+            </table>
+            <div
+              id="pagination"
+              class="bg-[#F7F7F7] flex py-[22px] pl-[24px] items-center text-center gap-4"
+            >
+              <button class="text-[12px] text-gray-300 font-semibold">
+                Previous Page
+              </button>
+              <ul class="flex gap-2">
+                <li
+                  class="rounded-full bg-[#E6E6E6] text-[#4C4C4C] px-2 py-1 text-[12px] font-semibold hover:bg-gray-500 hover:text-white"
+                >
+                  1
+                </li>
+                <li
+                  class="rounded-full bg-[#E6E6E6] text-[#4C4C4C] px-2 py-1 text-[12px] font-semibold hover:bg-gray-500 hover:text-white"
+                >
+                  2
+                </li>
+                <li
+                  class="rounded-full bg-[#E6E6E6] text-[#4C4C4C] px-2 py-1 text-[12px] font-semibold hover:bg-gray-500 hover:text-white"
+                >
+                  3
+                </li>
+                <li
+                  class="rounded-full bg-[#E6E6E6] text-[#4C4C4C] px-2 py-1 text-[12px] font-semibold hover:bg-gray-500 hover:text-white"
+                >
+                  4
+                </li>
+                <li
+                  class="rounded-full bg-[#E6E6E6] text-[#4C4C4C] px-2 py-1 text-[12px] font-semibold hover:bg-gray-500 hover:text-white"
+                >
+                  5
+                </li>
+                <li
+                  class="rounded-full bg-[#E6E6E6] text-[#4C4C4C] px-2 py-1 text-[12px] font-semibold hover:bg-gray-500 hover:text-white"
+                >
+                  6
+                </li>
+                <li
+                  class="rounded-full bg-[#E6E6E6] text-black px-2 py-1 text-[12px] font-semibold hover:bg-gray-500 hover:text-white"
+                >
+                  7
+                </li>
+              </ul>
+              <button
+                class="text-[12px] text-[#4C4C4C] hover:text-gray-900 font-semibold"
+              >
+                Next Page
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- right content -->
+      <div class="h-full col-span-4 text-white pt-[60px] mr-[80px]">
+        <div class="flex gap-3 items-center justify-end">
+          <img src="img/assets/Avatar - 03.png" width="40px" alt="" />
+          <div class="gap-y-4">
+            <h3 class="text-sm font-semibold text-[#4c4c4c]">Karim Benzema</h3>
+            <p class="text-gray-300 text-[12px] font-semibold">Admin</p>
+          </div>
+          <i
+            class="fas fa-bell bg-[#f2f2f2] p-3 rounded-full hover:bg-gray-400 text-[#4c4c4c] hover:text-white"
+          ></i>
+        </div>
+        <div class="bg-[#f2f2f2] py-[24px] px-[25px] mt-[80px]">
+          <h3 class="justify-center text-black text-center font-bold">
+            Best Selling Artist
+          </h3>
+          <ul class="">
+            <li class="flex items-center text-center justify-between mt-6">
+              <div class="flex gap-4 text-center items-center">
+                <img src="img/assets/Avatar - 05.png" width="32px" alt="" />
+                <h5 class="text-[#4c4c4c] font-semibold text-sm">Fotsam</h5>
+              </div>
+              <p class="text-[12px] text-gray-500">40l+ Sales</p>
+              <article class="text-[12px] text-gray-500">$1.4M Revenue</article>
+            </li>
+            <li class="flex items-center text-center justify-between mt-6">
+              <div class="flex gap-4 text-center items-center">
+                <img src="img/assets/Avatar - 02.png" width="32px" alt="" />
+                <h5 class="text-[#4c4c4c] font-semibold text-sm">Siuuu</h5>
+              </div>
+              <p class="text-[12px] text-gray-500">40l+ Sales</p>
+              <article class="text-[12px] text-gray-500">$1.4M Revenue</article>
+            </li>
+            <li class="flex items-center text-center justify-between mt-6">
+              <div class="flex gap-4 text-center items-center">
+                <img src="img/assets/Avatar - 03.png" width="32px" alt="" />
+                <h5 class="text-[#4c4c4c] font-semibold text-sm">Fotsam</h5>
+              </div>
+              <p class="text-[12px] text-gray-500">40l+ Sales</p>
+              <article class="text-[12px] text-gray-500">$1.4M Revenue</article>
+            </li>
+          </ul>
+          <div class="justify-center items-center text-center mt-8">
+            <button
+              class="bg-[#B4CD93] text-[#4C4C4C] p-2 rounded-sm text-sm hover:bg-green-400 text-white"
+            >
+              View All Artist
+            </button>
+          </div>
+        </div>
+        <div class="bg-[#f2f2f2] py-[24px] px-[25px] mt-[32px]">
+          <h3 class="justify-center text-black text-center font-bold">
+            Best Selling Artist
+          </h3>
+          <ul class="">
+            <li class="flex items-center text-center justify-between mt-6">
+              <div class="flex gap-4 text-center items-center">
+                <img src="img/assets/Avatar - 05.png" width="32px" alt="" />
+                <h5 class="text-[#4c4c4c] font-semibold text-sm">Fotsam</h5>
+              </div>
+              <p class="text-[12px] text-gray-500">40l+ Sales</p>
+              <article class="text-[12px] text-gray-500">$1.4M Revenue</article>
+            </li>
+            <li class="flex items-center text-center justify-between mt-6">
+              <div class="flex gap-4 text-center items-center">
+                <img src="img/assets/Avatar - 02.png" width="32px" alt="" />
+                <h5 class="text-[#4c4c4c] font-semibold text-sm">Siuuu</h5>
+              </div>
+              <p class="text-[12px] text-gray-500">40l+ Sales</p>
+              <article class="text-[12px] text-gray-500">$1.4M Revenue</article>
+            </li>
+            <li class="flex items-center text-center justify-between mt-6">
+              <div class="flex gap-4 text-center items-center">
+                <img src="img/assets/Avatar - 03.png" width="32px" alt="" />
+                <h5 class="text-[#4c4c4c] font-semibold text-sm">Fotsam</h5>
+              </div>
+              <p class="text-[12px] text-gray-500">40l+ Sales</p>
+              <article class="text-[12px] text-gray-500">$1.4M Revenue</article>
+            </li>
+          </ul>
+          <div class="justify-center items-center text-center mt-8">
+            <button
+              class="bg-[#B4CD93] text-[#4C4C4C] p-2 rounded-sm text-sm hover:bg-green-400 text-white"
+            >
+              View All Artist
+            </button>
+          </div>
+        </div>
+        <div
+          class="bg-[#f2f2f2] p-[22px] mt-[32px] flex text-center items-center justify-between mb-12"
+        >
+          <ul class="flex gap-2 text-center items-center text-[#4C4C4C]">
+            <li
+              class="border-gray-300 px-2 py-1 rounded-md border-collapse border-2 text-[12px]"
+            >
+              10
+            </li>
+            <li>:</li>
+            <li
+              class="border-gray-300 px-2 py-1 rounded-md border-collapse border-2 text-[12px]"
+            >
+              34
+            </li>
+            <li
+              class="bg-[#B4CD93] text-[#4C4C4C] rounded-md px-2 py-1 justify-center items-center text-[12px]"
+            >
+              PM
+            </li>
+          </ul>
+          <article class="text-[#4c4c4c] text-sm">11/05/2022</article>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
